@@ -37,6 +37,14 @@
   border-radius: 12px;
 }
 
+button {
+  border-radius: 20px;
+  height: 35px;
+  background-color: blueviolet;
+  color: white;
+  font-weight: 500;
+}
+
 @media (min-width: 580px) {
   .expense-item__description {
     flex-direction: row;
