@@ -2,8 +2,8 @@ import ExpenseItem from "./ExpenseItem";
 import Card from "../UI/card";
 import "./expenses.css";
 
-
 var Expense = () => {
+
   const expenses = [
     {
       id: 'e1',
@@ -31,6 +31,7 @@ var Expense = () => {
       locationOfExpenditure: "Stationeries"
     },
   ];
+
   return (
     <Card className="expenses">
       {
