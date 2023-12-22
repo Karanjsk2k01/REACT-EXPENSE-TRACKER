@@ -19,20 +19,38 @@ const ExpenseForm = () => {
     setenteredDate(e.target.value);
   }
 
+  const enteredDetails = (e) => {
+
+    e.preventDefault();
+
+    let userObject = {
+      Title: enteredtitle,
+      Amount: enteredAmount,
+      Date: new Date(enteredDate)
+    }
+
+    console.log(userObject);
+
+    //clearing the inputs
+    setenteredtitle('');
+    setenteredAmount('');
+    setenteredDate('');
+  }
+
   return (
-    <form>
+    <form onSubmit={enteredDetails}>
       <div className='new-expense__controls'>
         <div className='new-expense__control'>
           <label>Title</label>
-          <input type='text' onChange={enteredtitleHandler} />
+          <input type='text' value={enteredtitle} onChange={enteredtitleHandler} />
         </div>
         <div className='new-expense__control'>
           <label>Amount</label>
-          <input type='number' min="0" step="1" onChange={enteredAmountHandler} />
+          <input type='number' min="0" step="1" value={enteredAmount} onChange={enteredAmountHandler} />
         </div>
         <div className='new-expense__control'>
           <label>Date</label>
-          <input type='date' min="2019-01-01" max="2023-12-31" onChange={enteredDateHandler} />
+          <input type='date' min="2019-01-01" max="2023-12-31" value={enteredDate} onChange={enteredDateHandler} />
         </div>
       </div>
       <div className='new-expense__actions'>
