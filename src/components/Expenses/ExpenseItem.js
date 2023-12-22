@@ -7,11 +7,9 @@ import { useState } from 'react';
 var ExpenseItem = (props) => {
 
   let [title, setTitle] = useState(props.title);
-  const [expense, setExpense] = useState(props.amount);
-
-  const updateExpense = () => {
-    setExpense('$100');
-  }
+  // const updateExpense = () => {
+  //   setExpense('$100');
+  // }
 
   const clickHandlers = () => {
     setTitle('Updated');
@@ -22,11 +20,11 @@ var ExpenseItem = (props) => {
     <Card className="expense-item">
       <ExpenseDate date={props.date} />
       <ExpenseDetails
-        amount={expense}
-        locationOfExpenditure={props.locationOfExpenditure}
+        amount={`$ ${props.amount}`}
+        // locationOfExpenditure={props.locationOfExpenditure}
         title={title}
       />
-      <button onClick={updateExpense}>Update Expense Amount</button>
+      {/* <button onClick={updateExpense}>Update Expense Amount</button> */}
       <button onClick={clickHandlers}>DeleteExpenses</button>
     </Card>
   )
