@@ -24,7 +24,9 @@
 .new-expense__actions {
   text-align: right;
   padding: 1rem 0rem;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .new-expense__visible {

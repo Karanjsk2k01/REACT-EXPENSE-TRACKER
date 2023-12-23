@@ -26,10 +26,11 @@ const ExpenseForm = (props) => {
 
     let userObject = {
       Title: enteredtitle,
-      Amount: enteredAmount,
+      Amount: +enteredAmount,
       Date: new Date(enteredDate)
     }
 
+    console.log(userObject);
     props.onSaveExpense(userObject);
 
     //clearing the inputs
