@@ -7,7 +7,7 @@ import { ChartData } from "./ChartData";
 
 var Expense = (props) => {
 
-  const [filteredValue, setFilteredValue] = useState('2020');
+  const [filteredValue, setFilteredValue] = useState('2021');
 
   const expenseData = props.expenseData || [];
 
@@ -60,7 +60,7 @@ var Expense = (props) => {
 
   return (
     <Card className="expenses">
-      <ChartData />
+      <ChartData expenses={filteredExpenses} />
       <ExpenseFilter selected={filteredValue} onchangeFilter={onFilterChange} />
       {expenseslist}
     </Card >

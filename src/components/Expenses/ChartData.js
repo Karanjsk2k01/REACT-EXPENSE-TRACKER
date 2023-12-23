@@ -19,7 +19,7 @@ export const ChartData = (props) => {
     { label: 'Dec', value: 0 }
   ];
 
-  for (const expense in props.expenseData) {
+  for (const expense of props.expenses) {
     const expenseMonth = expense.Date.getMonth();
     dataPoints[expenseMonth].value += expense.Amount
   }

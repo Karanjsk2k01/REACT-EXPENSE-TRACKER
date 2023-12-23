@@ -2,7 +2,6 @@ import ExpenseDate from './ExpenseDate';
 import ExpenseDetails from './ExpenseDetails';
 import './ExpenseItem.css';
 import Card from '../UI/card';
-import { useState } from 'react';
 
 var ExpenseItem = (props) => {
 
