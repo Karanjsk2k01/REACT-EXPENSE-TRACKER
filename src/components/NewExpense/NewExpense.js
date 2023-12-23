@@ -11,8 +11,6 @@ const NewExpense = (props) => {
       id: Math.random().toString()
     }
 
-    // console.log('In newExpenses.js');
-    // console.log(formDateExpense);
     props.onSaveExpenseDetails(formDateExpense);
 
   }
