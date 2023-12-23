@@ -6,26 +6,13 @@ import { useState } from 'react';
 
 var ExpenseItem = (props) => {
 
-  let [title, setTitle] = useState(props.title);
-  // const updateExpense = () => {
-  //   setExpense('$100');
-  // }
-
-  const clickHandlers = () => {
-    setTitle('Updated');
-    console.log(title);
-  }
-
   return (
     <Card className="expense-item">
       <ExpenseDate date={props.date} />
       <ExpenseDetails
         amount={`$ ${props.amount}`}
-        // locationOfExpenditure={props.locationOfExpenditure}
-        title={title}
+        title={props.title}
       />
-      {/* <button onClick={updateExpense}>Update Expense Amount</button> */}
-      <button onClick={clickHandlers}>DeleteExpenses</button>
     </Card>
   )
 }
