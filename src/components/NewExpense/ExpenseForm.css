@@ -24,4 +24,11 @@
 .new-expense__actions {
   text-align: right;
   padding: 1rem 0rem;
+
+}
+
+.new-expense__visible {
+  text-align: center;
+  padding: 1rem 0rem;
+  height: 100%;
 }
